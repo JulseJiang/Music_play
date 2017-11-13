@@ -54,17 +54,27 @@ div{
 	height: 69px;
 	background: url(../img/playCtl.png) no-repeat;
 	position: relative;
-	top: 150px;
-	left: 150px;
-	background-position-x: -140px;
 	z-index: 4;
-	width: 150px;
+	top: 115px;
+	left: 115px;
+	background-position-x: -200px;
 	
+}
+@media only screen and (max-width: 1000px) {
+    #parent{
+    	-webkit-box-orient: vertical;
+    }
+    #child1{
+    	-webkit-box-flex: 0;
+    } #child1{
+    	-webkit-box-flex: 0;
+    }
 }
 #play_content{
 	width: 300px;
 	height: 300px;
-	position: absolute;
+	/*position: absolute;*/
+	margin: auto;
 }
 .rotate {
       -webkit-animation: rotating 15s linear infinite;
