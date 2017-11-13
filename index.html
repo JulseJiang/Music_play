@@ -11,16 +11,34 @@
 			<div id="child1"></div>
 			<div id="child2">
 				<!--<img id="point" src="img/point.png" />-->
-				<div id="play_content">
-					<img id="playerMask" src="img/playerMask.png"/>
-					<img id="playerBtn" class="rotate" src="img/MichaelBolton.jpg" />
-					<div id="playCtl" ></div>
+				<div class="">
+					<div id="play_content" class="center">
+						<!--镂空图标-->
+						<img id="playerMask" src="img/playerMask.png"/>
+						<!--CD封面-->
+						<img id="playerBtn" class="rotate" src="img/MichaelBolton.jpg" />
+						<div class="play_stage">
+							<div id="playCtl" class="play_icon"></div>
+							<div  class="playState stop play_icon"></div>
+						</div>
+					</div>
+					<div id="lyric_content" class="center">
+						<h2 id="music_title"></h2>
+						<audio autoplay controls class="center">
+					<source src="music/Naomi & Goro - Top Of The World.mp3"></source>
+				</audio>
+						<ul id="lyric_ul">
+						</ul>
+					</div>
+					<!--<div id="lyric_content">
+						
+					</div>-->
 				</div>
-				<!--<audio autoplay>
-					<source src="music/Don'T Make Me Wait For Love.mp3"></source>
-				</audio>-->
+				
 			</div>
 			<div id="child3"></div>
 		</div>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+		<script type="text/javascript" src="js/musicplay.js" ></script>
 	</body>
 </html>

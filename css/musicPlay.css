@@ -6,7 +6,16 @@ html,body{
 }
 div{
 	border: red 1px solid;
-	background: darkgray;
+}
+li{
+	list-style: none;
+	line-height: 30px;
+}
+audio{
+	
+}
+.red{
+	color: red;
 }
 #parent {
 	width: 100%;
@@ -46,19 +55,43 @@ div{
 	position: absolute;
 	border-radius: 50%;
 }
-#playerBtn:hover{
-	
+#playerBtn :hover{
+	border-radius: 0%;
+	animation-play-state: paused;
+	transform: 0s;
 }
-#playCtl{
+.playerBtn_paused{
+	animation-play-state: paused;
+	-webkit-animation-play-state:paused;
+}
+.play_stage{
+	width: 69px;
+	height: 69px;
+	position: relative;
+	left: 115px;
+	top: 115px;
+	z-index: 4;
+}
+.play_icon{
 	width: 69px;
 	height: 69px;
 	background: url(../img/playCtl.png) no-repeat;
-	position: relative;
+	position: absolute;
 	z-index: 4;
-	top: 115px;
-	left: 115px;
+}
+/*CD中心圆圈*/
+#playCtl{
+	z-index: 4;
 	background-position-x: -200px;
 	
+}
+.playState{
+	z-index: 5;
+	background-position-x: 0px;
+}
+.stop{
+	z-index: 5;
+	background-position-x: -100px;
 }
 @media only screen and (max-width: 1000px) {
     #parent{
@@ -70,24 +103,42 @@ div{
     	-webkit-box-flex: 0;
     }
 }
+.center{
+	position: relative;
+	margin: auto;
+}
 #play_content{
 	width: 300px;
 	height: 300px;
+	float: left;
+	/*display: inline;*/
+	/*position: relative;*/
 	/*position: absolute;*/
-	margin: auto;
+	/*position: relative;
+	margin: auto;*/
 }
+#lyric_content{
+	float: left;
+	/*width: 300px;
+	height: 300px;*/
+	/*position: relative;*/
+	/*display: inline;*/
+	/*left: 300px;*/
+}
+
 .rotate {
-      -webkit-animation: rotating 15s linear infinite;
+    -webkit-animation: rotating 15s linear infinite;
     -moz-animation: rotating 15s linear infinite;
-     -o-animation: rotating 15s linear infinite;
-     animation: rotating 15s linear infinite
+    -o-animation: rotating 15s linear infinite;
+    animation: rotating 15s linear infinite
  }
  @-webkit-keyframes rotating {
      from { -webkit-transform: rotate(0) }
      to { -webkit-transform: rotate(360deg) }
  }
  
- @keyframes rotating {
+ @keyframes 
+  {
     from { transform: rotate(0) }
     to { transform: rotate(360deg) }
  }
