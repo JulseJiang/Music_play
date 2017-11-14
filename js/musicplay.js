@@ -41,6 +41,7 @@ $(function(){
 		$playerBtn.css({ 
 			'animation-play-state':'running'
 			});
+//	$('li').show();
 		console.log('currentTime'+$audio.get(0).currentTime);
 		//设置定时器，刷新歌词
 		var sit_refresh_lyric = setInterval(function(){
@@ -50,6 +51,7 @@ $(function(){
 					$('li:eq('+i+')').addClass('red');
 					if(i>0){
 						$('li:eq('+(i-1)+')').removeClass('red');
+						$('li:eq('+(i-1)+')').hide();
 					}
 					console.log('定位到改行');
 				}
