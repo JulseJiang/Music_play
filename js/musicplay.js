@@ -26,22 +26,14 @@ $(function(){
 		if($playState.hasClass('stop')){
 			console.log('bofang');
 			$audio.get(0).play();
-//			$playerBtn.css({ 
-//			'animation-play-state':'running'
-//			});
 		}else{ 
 			$audio.get(0).pause();
-//			$audio.get(0).currentTime=0;
-//			$playerBtn.css({ 
-//			'animation-play-state':'paused'
-//			});
 		}
 	});
 	$audio.bind("playing",function(){
 		$playerBtn.css({ 
 			'animation-play-state':'running'
 			});
-//	$('li').show();
 		console.log('currentTime'+$audio.get(0).currentTime);
 		//设置定时器，刷新歌词
 		var sit_refresh_lyric = setInterval(function(){
@@ -80,13 +72,11 @@ $(function(){
 			$li.attr({ 
 				"date-no":i++ 
 			});
-//			console.log("$li:"+$li.html());
 			$lyric_ul.append($li);
 		}
 	}); 
 });
 function playBtn_css(){
-//	console.log('$audio.paused:'+$audio.paused);
 	if($playState.hasClass('stop')){
 		$playerBtn.css({ 
 			'animation-play-state':'running'
